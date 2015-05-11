@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+   <form class="form-horizontal" action= "newnote" method = "post">
+   <fieldset>
+     <legend>Enter a Meeting Note</legend>
+
+     <div class="form-group">
+        <label class="col-md-4 control-label" for="memberName">
+        <div class="col-md-4">
+        <select id="memberName" name="memberName" class="form-control">
+          <option value="None">(Select Name)</option>
+          <option value="Mark">Mark</option>
+          <option value="David">David</option>
+          <option value="John">John</option>
+          <option value="Mary">Mary</option>
+          </select>
+        </select>
+        </div>
+     </div>
+
+     <div class="form-group">
+        <label class="col-md-4 control-label" for="project">
+        <div class="col-md-4">
+        <select id="project" name="project" class="form-control">
+        <option value="None">(Select Project)</option>
+        <option value="matrix">Matrix API Development</option>
+        <option value="trinity">Trinity UI Development</option>
+        <option value="morpheus">Morpheus Data Integration</option>
+
+        </select>
+        </div>
+     </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="workYesterday">
+      <div class="col-md-6">
+        <textarea class="form-control" id="workYesterday" name="workYesterday"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="workToday">
+      <div class="col-md-6">
+        <textarea class="form-control" id="workToday" name="workToday"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="impediment">
+      <div class="col-md-6">
+        <textarea class="form-control" id="impediment" name="impediment"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <label class="col-md-4 control-label" for="btnSaveNote">Save Note</label>
+    <div class="col-md-4">
+    <button id="btnSaveNote" name="btnSaveNote" class="btn btn-primary">Save Note</button>
+    </div>
+
+    </div>
+
+   </fieldset>
+
+
+
+
+  </body>
+</html>
