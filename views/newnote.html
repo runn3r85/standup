@@ -3,14 +3,20 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
+    <link rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css'/>
+  </head>
   </head>
   <body>
+  <div class="container">
    <form class="form-horizontal" action= "newnote" method = "post">
    <fieldset>
      <legend>Enter a Meeting Note</legend>
 
      <div class="form-group">
         <label class="col-md-4 control-label" for="memberName">
+        Member Name
+        </label>
         <div class="col-md-4">
         <select id="memberName" name="memberName" class="form-control">
           <option value="None">(Select Name)</option>
@@ -25,6 +31,8 @@
 
      <div class="form-group">
         <label class="col-md-4 control-label" for="project">
+        Project
+        </label>
         <div class="col-md-4">
         <select id="project" name="project" class="form-control">
         <option value="None">(Select Project)</option>
@@ -38,6 +46,8 @@
 
     <div class="form-group">
       <label class="col-md-4 control-label" for="workYesterday">
+      Work Yesterday
+      </label>
       <div class="col-md-6">
         <textarea class="form-control" id="workYesterday" name="workYesterday"></textarea>
       </div>
@@ -45,6 +55,8 @@
 
     <div class="form-group">
       <label class="col-md-4 control-label" for="workToday">
+      Work Today
+      </label>
       <div class="col-md-6">
         <textarea class="form-control" id="workToday" name="workToday"></textarea>
       </div>
@@ -52,6 +64,8 @@
 
     <div class="form-group">
       <label class="col-md-4 control-label" for="impediment">
+      Impediment
+      </label>
       <div class="col-md-6">
         <textarea class="form-control" id="impediment" name="impediment"></textarea>
       </div>
@@ -69,6 +83,6 @@
 
 
 
-
+   </div>
   </body>
 </html>
