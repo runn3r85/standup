@@ -3,9 +3,42 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
+    <link rel='stylesheet' href='/stylesheets/bootstrap-theme.min.css'/>
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <div class="container">
+      <form action="/" method="post">
+        <div class="row clearfix">
+          <div class="col-md-4 column">
+          <select id="memberName" name="memberName" class="form-control">
+            <option value="">(Show All Members)</option>
+            <option value="Mark">Mark</option>
+            <option value="Mark">Mark</option>
+            <option value="David">David</option>
+            <option value="John">John</option>
+            <option value="Mary">Mary</option>
+          </select>
+          </div>
+          <div class="col-md-8 column">
+          <button id="btnFilterNotes" name="btnFilterNotes" class="btn btn-primary">Filter Notes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+    <h1>Notes</h1>
+      <div class="col-md-12 column list-group">
+      {% for note in notes %}
+        <div class="list-group-item">
+          <div>Note from <em><strong>{{ note.memberName }}</strong></em> on: {{ note.createdOn }} - for project: <strong>{{ note.project }}</strong></div>
+          <div><strong>Work yesterday: {{note.workYesterday }}</strong></div>
+          <div><strong>Work today: {{ note.workToday }}</strong></div>
+          <div><strong>Impediment: {{ note.impediment }}</strong></div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
   </body>
 </html>
