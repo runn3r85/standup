@@ -9,6 +9,14 @@
   </head>
   <body>
   <div class="container">
+
+  {% if message.length > 0 %}
+    <div class="alert alert-danger alert-error">
+      {{ message }}
+    </div>
+  {% endif %}
+
+
    <form class="form-horizontal" action= "newnote" method = "post">
    <fieldset>
      <legend>Enter a Meeting Note</legend>

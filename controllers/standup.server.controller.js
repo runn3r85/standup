@@ -37,10 +37,16 @@ exports.create = function(req, res) {
     impediment: req.body.impediment
   });
 
-  entry.save();
-
-  //rediect to home page...
-  res.redirect(301, '/');
+  entry.save(function(err){
+    if(err) {
+      var errMsg = "Sorry, there was an error saving the stand-up meeting note. " + err;
+      res.render('newnote', { title: 'Standup - New Note (error)', message: errMsg });
+    } else {
+      console.log('Standup meeting note was saved.')
+      //rediect to home page...
+      res.redirect(301, '/');
+    }
+  });
 };
 
 // New Method
